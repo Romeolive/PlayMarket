@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.google.android.gms.games.PlayGames;
 import com.google.android.gms.games.PlayGamesSdk;
 
-
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -32,12 +31,6 @@ public class MainActivity extends AppCompatActivity {
         leaders.setOnClickListener(view -> {
             showLeaderBoards();
         });
-
-
-
-
-
-
         PlayGames.getGamesSignInClient(this).isAuthenticated().addOnCompleteListener(task -> {
             boolean allIsGood =
                     task.isSuccessful() && task.getResult().isAuthenticated();
@@ -49,9 +42,6 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-
-
-
 
     }
     private void SignIn() {
